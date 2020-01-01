@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+          ['1930','Blond Hair', 3],
+['1930','Auburn Hair', 1],
+['1930','Blue Hair', 1],
+['1930','Grey Hair', 1],
+['1930','White Hair', 3],
+['1930','Brown Hair', 7],
+['1930','Black Hair', 12]
+,
+['1940','Blond Hair', 48],
+['1940','Green Hair', 5],
+['1940','Auburn Hair', 4],
+['1940','Gold Hair', 1],
+['1940','Brown Hair', 71],
+['1940','Black Hair', 64],
+['1940','Bald', 7],
+['1940','Red Hair', 27],
+['1940','Reddish Blond Hair', 1],
+['1940','Blue Hair', 1],
+['1940','No Hair', 7],
+['1940','Grey Hair', 9],
+['1940','White Hair', 23],
+['1940','Strawberry Blond Hair', 3]
+,
+['1950','Blond Hair', 20],
+['1950','Green Hair', 2],
+['1950','Orange Hair', 2],
+['1950','Purple Hair', 1],
+['1950','Gold Hair', 1],
+['1950','Brown Hair', 28],
+['1950','Black Hair', 26],
+['1950','Bald', 3],
+['1950','Red Hair', 4],
+['1950','No Hair', 2],
+['1950','Grey Hair', 4],
+['1950','White Hair', 7],
+['1950','Strawberry Blond Hair', 2]
+,
+['1960','Blond Hair', 85],
+['1960','Green Hair', 11],
+['1960','Auburn Hair', 8],
+['1960','Orange Hair', 4],
+['1960','Purple Hair', 1],
+['1960','Silver Hair', 3],
+['1960','Gold Hair', 3],
+['1960','Brown Hair', 166],
+['1960','Black Hair', 167],
+['1960','Bald', 45],
+['1960','Yellow Hair', 2],
+['1960','Variable Hair', 5],
+['1960','Red Hair', 45],
+['1960','Blue Hair', 1],
+['1960','No Hair', 57],
+['1960','Grey Hair', 34],
+['1960','White Hair', 35],
+['1960','Strawberry Blond Hair', 6]
+,
+['1970','Blond Hair', 116],
+['1970','Auburn Hair', 4],
+['1970','Green Hair', 7],
+['1970','Orange Hair', 3],
+['1970','Purple Hair', 2],
+['1970','Silver Hair', 1],
+['1970','Gold Hair', 1],
+['1970','Brown Hair', 135],
+['1970','Black Hair', 279],
+['1970','Violet Hair', 1],
+['1970','Bald', 39],
+['1970','Variable Hair', 3],
+['1970','Yellow Hair', 4],
+['1970','Red Hair', 46],
+['1970','Reddish Blond Hair', 1],
+['1970','Blue Hair', 3],
+['1970','No Hair', 78],
+['1970','Light Brown Hair', 1],
+['1970','Platinum Blond Hair', 1],
+['1970','Grey Hair', 33],
+['1970','White Hair', 56],
+['1970','Strawberry Blond Hair', 7]
+,
+['1980','Blond Hair', 194],
+['1980','Auburn Hair', 5],
+['1980','Green Hair', 29],
+['1980','Purple Hair', 8],
+['1980','Orange Hair', 7],
+['1980','Silver Hair', 5],
+['1980','Gold Hair', 3],
+['1980','Brown Hair', 266],
+['1980','Black Hair', 422],
+['1980','Violet Hair', 3],
+['1980','Bald', 31],
+['1980','Pink Hair', 3],
+['1980','Variable Hair', 3],
+['1980','Reddish Brown Hair', 3],
+['1980','Red Hair', 124],
+['1980','Blue Hair', 11],
+['1980','No Hair', 59],
+['1980','Platinum Blond Hair', 1],
+['1980','White Hair', 104],
+['1980','Grey Hair', 42],
+['1980','Strawberry Blond Hair', 16],
+['1980','Magenta Hair', 2]
+,
+['1990','Blond Hair', 259],
+['1990','Auburn Hair', 3],
+['1990','Green Hair', 21],
+['1990','Orange Hair', 3],
+['1990','Purple Hair', 13],
+['1990','Silver Hair', 4],
+['1990','Gold Hair', 2],
+['1990','Brown Hair', 306],
+['1990','Black Hair', 551],
+['1990','Bald', 61],
+['1990','Pink Hair', 9],
+['1990','Yellow Hair', 1],
+['1990','Variable Hair', 5],
+['1990','Red Hair', 110],
+['1990','Blue Hair', 15],
+['1990','No Hair', 101],
+['1990','Light Brown Hair', 1],
+['1990','Grey Hair', 47],
+['1990','White Hair', 98],
+['1990','Strawberry Blond Hair', 6],
+['1990','Magenta Hair', 1]
+,
+['2000','Blond Hair', 276],
+['2000','Auburn Hair', 14],
+['2000','Green Hair', 19],
+['2000','Orange Hair', 10],
+['2000','Purple Hair', 11],
+['2000','Silver Hair', 1],
+['2000','Brown Hair', 398],
+['2000','Black Hair', 612],
+['2000','Bald', 81],
+['2000','Pink Hair', 8],
+['2000','Yellow Hair', 1],
+['2000','Variable Hair', 6],
+['2000','Red Hair', 93],
+['2000','Reddish Blond Hair', 3],
+['2000','Blue Hair', 11],
+['2000','No Hair', 126],
+['2000','White Hair', 78],
+['2000','Grey Hair', 60],
+['2000','Strawberry Blond Hair', 1]
+,
+['2010','Blond Hair', 87],
+['2010','Auburn Hair', 1],
+['2010','Green Hair', 5],
+['2010','Orange Hair', 1],
+['2010','Purple Hair', 7],
+['2010','Brown Hair', 120],
+['2010','Black Hair', 202],
+['2010','Bald', 40],
+['2010','Pink Hair', 5],
+['2010','Yellow Hair', 1],
+['2010','Red Hair', 57],
+['2010','Reddish Blond Hair', 1],
+['2010','Blue Hair', 6],
+['2010','No Hair', 57],
+['2010','White Hair', 38],
+['2010','Grey Hair', 24],
+['2010','Strawberry Blond Hair', 1]
+
+
+        ]);
+
+        // Sets chart options.
+    	var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+                  '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+    	var options = {
+      	height: 400,
+      	width: 600,
+      	sankey: {
+        	node: {
+          	colors: colors
+        	},
+        	link: {
+          	colorMode: 'gradient',
+          	colors: colors
+        	}
+      	}
+   	 	};
+
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
+  </body>
+</html>

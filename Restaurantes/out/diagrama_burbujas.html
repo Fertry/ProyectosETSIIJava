@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+               
+        ['ID', 'hAxis', 'vAxis', 'colour', 'size'],
+        ['MANHATTAN',59.16694524303002, 19.12196964631945, 149570, 149570],
+['BRONX',57.88384898542788, 18.320069362051658, 32871, 32871],
+['BROOKLYN',58.219473298564715, 19.246239386233352, 92804, 92804],
+['STATEN_ISLAND',60.17137416693113, 19.611393208505238, 12604, 12604],
+['QUEENS',58.60529857699962, 18.658882536322746, 86929, 86929]
+ 
+      ]);
+
+      var options = {
+        title: 'Volumen de inspecciones',
+        hAxis: {title: 'Porcentaje de inspecciones críticas'},
+        vAxis: {title: 'Media de scores'},
+        bubble: {textStyle: {fontSize: 10}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

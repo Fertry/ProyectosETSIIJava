@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+          ['Agender Characters','Good Characters', 6],
+['Agender Characters','Bad Characters', 9],
+['Agender Characters','Neutral Characters', 8]
+,
+['Male Characters','Good Characters', 1917],
+['Male Characters','Reformed Criminals', 1],
+['Male Characters','Bad Characters', 2247],
+['Male Characters','Neutral Characters', 733]
+,
+['Female Characters','Good Characters', 1282],
+['Female Characters','Reformed Criminals', 1],
+['Female Characters','Bad Characters', 678],
+['Female Characters','Neutral Characters', 433]
+,
+['Genderfluid Characters','Good Characters', 1],
+['Genderfluid Characters','Neutral Characters', 1]
+,
+['Genderless Characters','Good Characters', 2],
+['Genderless Characters','Bad Characters', 1]
+
+
+        ]);
+
+        // Sets chart options.
+    	var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+                  '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+    	var options = {
+      	height: 400,
+      	width: 600,
+      	sankey: {
+        	node: {
+          	colors: colors
+        	},
+        	link: {
+          	colorMode: 'gradient',
+          	colors: colors
+        	}
+      	}
+   	 	};
+
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
+  </body>
+</html>
